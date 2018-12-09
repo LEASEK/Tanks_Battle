@@ -14,10 +14,12 @@ class TANKS_BATTLE_API ATankAIController : public AAIController
 {
 	GENERATED_BODY()
 
-	public:
+	private:
 
 		virtual void BeginPlay() override;
 
-		ATank* GetAIControlledTank();
+		ATank* GetAIControlledTank() const;
+
+		ATank* GetPlayerTank() const;
 	
 };
